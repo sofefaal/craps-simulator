@@ -1,9 +1,9 @@
-import GameForm from "./components/GameForm"
-import Results from "./components/Results"
+import GameForm from "../src/components/gameForm/GameForm"
+import Results from "../src/components/results/Results";
 import { simulateGames } from "./logic/simulateGames"
 import { calculateStats } from "./logic/stats"
 import { useState } from "react"
-import './App.css'
+import styles from './App.module.css'
 
 function App() {
   const [gameStats, setGameStats] = useState(null)
@@ -15,11 +15,13 @@ function App() {
     setGameStats(stats)
   }
   return (
-    <>
+    <div className={styles.app_container}>
+    <div className={styles.card}>
     <h1>Craps Simulation Game</h1>
     <GameForm onSubmit={handleSimulation} />
     <Results stats={gameStats} />
-    </>
+      </div>  
+    </div>
   )
 }
 
