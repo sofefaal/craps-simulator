@@ -17,6 +17,7 @@ export default function GameForm({onSubmit}) {
         <form onSubmit={handleSubmit} className={styles.form}>
             <label htmlFor="games">Number of Games:</label>
             <input
+            className={styles.input}
             id="games"
             name="games"
             type="number"
@@ -24,7 +25,7 @@ export default function GameForm({onSubmit}) {
             required
             />
 
-            <button type="submit">Run Simulation</button>
+            <button className={styles.button} type="submit">Run Simulation</button>
         </form>
         </>
     )
