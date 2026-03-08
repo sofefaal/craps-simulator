@@ -23,4 +23,5 @@
 
 .button:hover {
     background-color: #433eac;
+    transition-duration: 5s;
 }
