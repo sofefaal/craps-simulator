@@ -13,12 +13,12 @@ export function playGame() {
     
     //determine loss
     if([2, 3, 12].includes(rollCount)) {
-        return {results: "loss", rolls}
+        return {result: "loss", rolls}
     }
 
     //determine win
     if([7, 11].includes(rollCount)) {
-        return {results: "win", rolls}
+        return {result: "win", rolls}
     }
 
     //determine points
@@ -29,11 +29,11 @@ export function playGame() {
         rollCount = rollDiceTwice()
 
         if(rollCount === point) {
-            return {results: "win", rolls}
+            return {result: "win", rolls}
         }
 
         if(rollCount === 7) {
-            return {results: "loss", rolls}
+            return {result: "loss", rolls}
         }
     }
 }
